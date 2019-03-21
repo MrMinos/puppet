@@ -2,7 +2,9 @@ classes:
     - ocf_desktop
 
 ocf::auth::glogin: [[ocf, LOCAL]]
-ocf::auth::gsudo: [ocfstaff]
+# ocf::auth::gsudo: [ocfstaff]
+ocf::auth::usudo: [minos]
+ocf::auth::nopasswd: true
 
 # Allow ocfroot to use docker without sudo
 ocf::packages::docker::admin_group: ocfroot
